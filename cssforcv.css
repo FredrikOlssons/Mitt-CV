@@ -10,6 +10,11 @@ body {
     width: 100vw;
 }
 
+ul {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 .background-container{
     position: fixed;
     top: 0;
@@ -118,17 +123,23 @@ header {
 	right: 0pt;
 	height: 100px;
     z-index: 1;
-    position: absolute;
+    position: fixed;
 }
 
 h1 {
     color: seashell;
     font-size: 40px;
+    font-family: 'Neuton', serif;
 }
 
 .boxAboutMe  {
     width: 100vw;
     height: 1400px;
+}
+
+.merits, .contact {
+    outline: none;
+    cursor: pointer;
 }
 
 
@@ -138,8 +149,24 @@ h1 {
 }
 
 .boxAboutMeCourses {
-    width: 100vw;
+    top: 20vh;
     height: 1100px;
+    width: 100vw;
+}
+
+#Courses {
+    margin-top: 150px;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    border: 5px;
+    align-items: center;
+   
+    color: seashell;
+    z-index: 1;
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Neuton', serif;
 }
 
 #OmMig {
@@ -192,6 +219,7 @@ img {
         margin-right: 0px;
         margin-bottom: 20px;
   }
+}
   
   @media screen and (min-width: 1660px) {
     #OmMig {
@@ -229,20 +257,7 @@ img {
     }
   }
 
-  #Courses {
-    margin-top: 150px;
-    width: 850px;
-    display: flex;
-    flex-direction: column;
-    border: 5px;
-    align-items: center;
-    padding-left: 80px;
-    color: seashell;
-    z-index: 1;
-    position: absolute;
-    font-size: 16px;
-    font-family: 'Neuton', serif;
-}
+
 
 a {
     color: seashell;
