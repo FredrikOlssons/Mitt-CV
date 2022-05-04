@@ -1,18 +1,24 @@
 * {
     box-sizing: border-box;
     font-family: 'Neuton', serif;
+    color: seashell;
 }
 
 body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-    width: 100vw;
+    
 }
 
 ul {
     font-size: 18px;
     line-height: 1.5;
+}
+
+p, li {
+    font-size: 22px;
+    color: seashell;
 }
 
 .background-container{
@@ -113,11 +119,22 @@ ul {
       }
 }
   
+footer {
+    z-index: 1;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-top: groove;
+    vertical-align: middle;
+}
 
 header {
     display: flex;
 	align-items: center;
 	justify-content: center;
+    flex-direction: column;
+    
 	top:0pt;
 	left: 0pt;
 	right: 0pt;
@@ -127,14 +144,12 @@ header {
 }
 
 h1 {
-    color: seashell;
     font-size: 40px;
-    font-family: 'Neuton', serif;
-}
+    }
 
 .boxAboutMe  {
-    width: 100vw;
-    height: 1400px;
+    
+    z-index: 1;
 }
 
 .merits, .contact {
@@ -142,10 +157,24 @@ h1 {
     cursor: pointer;
 }
 
+.merits {
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 100px;
+    }
+
+a {
+    font-size: 22px;
+}
 
 .boxAboutMeCV  {
-    width: 100vw;
-    height: 1170px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    margin-top: 180px;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .boxAboutMeCourses {
@@ -171,39 +200,62 @@ h1 {
 
 #OmMig {
     margin-top: 180px;
-    width: 597px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     border: 5px;
     align-items: center;
-    padding-left: 115px;
     color: seashell;
     z-index: 1;
-    position: absolute;
     font-size: 16px;
+    justify-content: space-between;
+}
+
+#OmMi {
+    margin-top: 180px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 5px;
+    align-items: center;
+    color: seashell;
+    z-index: 1;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.omMigText {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 img {
-    height: 360px;
+    height: 600px;
     width: auto;
     border-radius: 50px;
+    margin-top: 40px;
 }
 
-.personInfo {
+#personInfo {
     content: "";
     display: inline-block;
     width: 100%;
     color: seashell;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
 }
 
 @media screen and (max-width: 992px) {
     .boxAboutMe {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap-reverse
     }
-    #OmMig {
-        padding-left: 0;
-    }
+
     #Courses {
         padding-left: 0px;
         width: 90vw;
@@ -215,30 +267,58 @@ img {
         font-size: 30px;
     }
     #OmMig {       
-        margin-left: 20px;
-        margin-right: 0px;
-        margin-bottom: 20px;
+        margin: 0px;
+        margin-top: 50px;
+        width: 80vw;
+  }
+  .personInfo {
+      align-content: center;
   }
 }
   
-  @media screen and (min-width: 1660px) {
-    #OmMig {
-        padding-left: 150px;
-        margin-left: 230px;
+  @media screen and (max-width: 1125px) {
+    .OmMig {
+        width: 80%;
+        flex-wrap: wrap-reverse
     }
+    * {
+        font-size: 18px !important;
+    }
+    h1 {
+        font-size: 40px !important;
+    }
+    img {
+        height: 500px;
+    }
+    .merits {
+        height: 10px;
+        margin: 0px;
+    }
+    #OmMi {
+        margin-top: 180px;
+        width: 80%;
   }
+}
 
   @media screen and (max-width: 640px) {
     .boxAboutMe {
         display: flex;
         justify-content: center;
     }
+
+    .boxAboutMeCV {
+        margin-top: 120px;
+    }
+
+    .personInfo {
+        margin: 0px;
+    }
     
+    img {
+        height: 400px;
+    }
     #OmMig {
-        margin-left: 10px;
-        margin-right: 0px;
-        margin-bottom: 10px;
-        width: 90vw;
+        margin-top: 0% !important;
     }
 
     .headerText {
@@ -249,6 +329,8 @@ img {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        
+        ;
     }    
     
     #Mig {
@@ -257,25 +339,13 @@ img {
     }
   }
 
-
-
-a {
-    color: seashell;
-    font-family: 'Neuton', serif;
-}
-
-p {
-    color: seashell;
-}
-
-.merits {
-    font-size: 20px;
-    justify-content: center;
-    left: 50%;
-}
-
+  @media screen and (max-width: 550px) {
+    h1 {
+        font-size: 30px !important;
+    }
+  }
 .emptySpace {
-    height: 70px;
+    height: 150px;
 }
 
 
@@ -285,8 +355,8 @@ footer {
     position: relative;
     bottom: 0;
     border-top: groove;
-    border-color: seashell;
     vertical-align: middle;
+
 }
   
 .contact {
@@ -295,4 +365,5 @@ footer {
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
+    gap: 20px
 }
